@@ -9,7 +9,9 @@
 ##
 ## The cacheSolve function computes the inverse of the matrix using the solve() function
 ## of R. Given a CacheMatrix, the function will first check if the inverse was already
-## computed and stored in the object. If not it will compute a new inverse and 
+## computed and stored in the object. If not it will compute a new inverse and store it
+## in the object before it is returned. This way any subsequent call to CacheSolve
+## will get the already computed inverse matrix.
 
 ## This function creates the inverse caching matrix object
 makeCacheMatrix <- function(x = matrix()) {
